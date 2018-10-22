@@ -1,76 +1,99 @@
-.container
-      
-      h2.text-center.top-buffer NodeJS User Registration Tutorial
+extends layout
+
+block content
+   .container
+
+      h1.text-center.top-buffer Are you interested to Serve as Voluteer in Janasena Sevadal in Peddapura, kakinada City & kakinada Rural.
+      h2.text-center.top-buffer Sign Up
       form.form-horizontal(role="form", method="post")
         .form-group
           .alert.alert-danger(role='alert', id="msgDiv")
 
         .form-group
           label.col-sm-3.control-label(for="fullname") 
-           strong Full Name
-          .col-sm-9
+           strong Full Name*
+          .col-sm-4
             input#fullname.form-control(type="text" placeholder="Full Name" autofocus="" value="")
-        .form-group
-          label.col-sm-3.control-label(for="email") 
-           strong Email
-          .col-sm-9
-            input#email.form-control(type="email" placeholder="Email")
-        .form-group
-          label.col-sm-3.control-label(for="password") 
-           strong Password
-          .col-sm-9
-            input#password.form-control(type="password" placeholder="Password")
-        .form-group
-          label.col-sm-3.control-label(for="cpassword") 
-           strong Confirm Password
-          .col-sm-9
-            input#cpassword.form-control(type="password" placeholder="Confirm password")
-        .form-group
-          label.col-sm-9.control-label(for="dob") 
-           strong Date of Birth
-          .col-sm-9
-            input#dob.form-control(type="date")
-        .form-group
-          label.col-sm-3.control-label(for="country") 
-           strong Country
-          .col-sm-9
-            select#country.form-control
-              option(value='') Please Select
-              option USA
-              option United Kingdom	
-              option Germany
-              option Denmark
-              option Ecuador
-              option Canada
-              option France
-              option Others
         .form-group
           label.control-label.col-sm-3 
            strong Gender
           .col-sm-6
             .row
-              .col-sm-6
+              .col-sm-3
                 label.radio-inline
                   input#femaleRadio(name="gender" type="radio" value="Female")
                   | &nbsp;Female
-              .col-sm-4
+              .col-sm-2
                 label.radio-inline
                   input#maleRadio(name="gender" type="radio" value="Male")
-                  | &nbsp;Male              
+                  | &nbsp;Male    
         .form-group
-          label.control-label.col-sm-9 
-           strong Meal Preference
-          .col-sm-9
-            .checkbox
-              label
-                input#calorieCheckbox(type="checkbox" value="Calorie" name="calorie")
-                | &nbsp;Low calorie
-            .checkbox
-              label
-                input#saltCheckbox(type="checkbox" value="Salt"  name="salt")
-                | &nbsp;Low salt
+          label.col-sm-3.control-label(for="dob") 
+           strong Date of Birth
+          .col-sm-3
+            input#dob.form-control(type="date")                   
         .form-group
-          .col-sm-9.col-sm-offset-3
+          label.col-sm-3.control-label(for="mobile") 
+           strong Mobile*
+          .col-sm-4
+            .row
+              .col-sm-3
+                input#mobilePreFix.form-control(type="text" placeholder="+91" autofocus="" value="+91")
+              .col-sm-6
+                input#mobile.form-control(type="text" placeholder="Mobile" autofocus="" value="") 
+        .form-group
+          label.col-sm-3.control-label(for="email") 
+           strong Email
+          .col-sm-4
+            input#email.form-control(type="email" placeholder="Email")
+        .form-group
+          label.col-sm-3.control-label(for="constituency") 
+           strong Constituency
+          .col-sm-3
+            select#constituency.form-control
+              option(value='') Please Select
+              option(value='kkdcity') Kakinada City
+              option(value='kkdrural') Kakinada Rural 
+              option(value='pdp') Peddapuram           
+        .form-group
+          label.control-label.col-sm-4
+           strong Interested area to volunteer
+          .col-sm-10
+            .row
+              .col-sm-3
+                .checkbox
+                  label
+                    input#SocialMediaCheckbox(type="checkbox" value="Social Media" name="SocialMedia")
+                    | &nbsp;Social Media
+              .col-sm-3      
+                .checkbox
+                  label
+                    input#GroudLevelCheckbox(type="checkbox" value="Groud Level"  name="GroudLevel")
+                    | &nbsp;Groud Level
+            .row   
+              .col-sm-3      
+                .checkbox
+                  label
+                    input#MembershipDriveCheckbox(type="checkbox" value="Membership Drive"  name="MembershipDrive")
+                    | &nbsp;Membership Drive     
+              .col-sm-3      
+                .checkbox
+                  label
+                    input#TrainingCheckbox(type="checkbox" value="Training"  name="Training")
+                    | &nbsp;Training 
+            .row                        
+              .col-sm-3      
+                .checkbox
+                  label
+                    input#OthersCheckbox(type="checkbox" value="Others"  name="Others")
+                    | &nbsp;Others                                       
+        .form-group
+          label.col-sm-4.control-label(for="hours") 
+           strong I would like to spend hours(per day):
+          .col-sm-2
+            input#hours.form-control(type="hours" placeholder="hours")
+        .form-group
+          .col-sm-3.col-sm-offset-3
             .checkbox
               label
                 input#terms(type="checkbox" value="yes" name="terms")
@@ -78,4 +101,4 @@
                 a(href="#") terms
         .form-group
           .col-sm-9.col-sm-offset-3
-            button#register.btn.btn-primary.btn-block(type="e") Register
+            button#register.btn.btn-primary.btn-block(type="e") Sign up
