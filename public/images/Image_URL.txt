@@ -1,0 +1,9 @@
+https://janasenaparty.org/static/donations/images/bg.jpg
+
+https://janasenaparty.org/static/donations/images/bg_logo.png
+
+https://janasenaparty.org/static/donations/images/img_president.png
+
+https://janasenaparty.org/static/donations/images/img_president_lg.png
+
+https://janasenaparty.org/static/donations/images/logo.png

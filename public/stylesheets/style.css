@@ -1,8 +1,65 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ // background-image: url(../images/bg.jpg);
 }
 
 a {
   color: #00B7FF;
+}
+
+
+a {color: black;margin: 5px; text-decoration: none;}
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+@use postcss-nested;
+@use postcss-cssnext;
+
+#table-wrapper {
+  display: flex;
+  
+}
+#desc {
+  width: 15em;
+  border-collapse: collapse;
+  
+  & th {
+    background-color: whitesmoke;
+    padding: 1em;
+    text-align: left;
+    border: 1px solid black;
+    padding: 1em;
+  }
+  
+  & td {
+    border: 1px solid black;
+    padding: 1em;
+  }
+}
+
+tdimg_president_lg{
+
+  td{
+    background-image: url("../public/images/img_president_lg.png");
+  }
+}
+
+table, th, td {
+   border: 1px solid black;
 }
